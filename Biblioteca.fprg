@@ -4,12 +4,44 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="unity"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-12-22 10:46:51 AM"/>
+        <attribute name="saved" value="2021-12-22 08:00:47 PM"/>
         <attribute name="created" value="dW5pdHk7REVTS1RPUC00Rkg4UkdSOzIwMjEtMTItMjI7MDk6NTc6MDAgQU07Mjg5OQ=="/>
-        <attribute name="edited" value="dW5pdHk7REVTS1RPUC00Rkg4UkdSOzIwMjEtMTItMjI7MTA6NDY6NTEgQU07MTszMDAz"/>
+        <attribute name="edited" value="dW5pdHk7REVTS1RPUC00Rkg4UkdSOzIwMjEtMTItMjI7MDg6MDA6NDcgUE07NzszMDI2"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
-        <body/>
+        <body>
+            <declare name="escolher, escolher2, contador, recomecar" type="Integer" array="False" size=""/>
+            <declare name="livro" type="String" array="True" size="5"/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="saldo, saldoaux" type="Real" array="False" size=""/>
+            <declare name="logica" type="Boolean" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <assign variable="livro[0]" expression="&quot;O pequeno pr&#237;ncipe&quot;"/>
+            <assign variable="livro[1]" expression="&quot;Helena&quot;"/>
+            <assign variable="livro[2]" expression="&quot;Sapiens-uma breve hist&#243;ria da humanidade&quot;"/>
+            <assign variable="livro[3]" expression="&quot;Mindset: a nova psicologia do sucesso&quot;"/>
+            <assign variable="livro[4]" expression="&quot;Assassinato no expresso do oriente&quot;"/>
+            <output expression="&quot;=================&quot;" newline="True"/>
+            <output expression="&quot;BIBLIOTECA&quot;" newline="True"/>
+            <output expression="&quot;=================&quot;" newline="True"/>
+            <output expression="&quot;Digite seu nome: &quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Bem-vindo &quot; &amp; nome &amp; &quot;!&quot;" newline="True"/>
+            <output expression="&quot;Digite seu saldo: &quot;" newline="True"/>
+            <input variable="saldo"/>
+            <assign variable="saldoaux" expression="saldo"/>
+            <assign variable="logica" expression="true"/>
+            <while expression="logica == true">
+                <output expression="&quot;=====================&quot;" newline="True"/>
+                <output expression="&quot;LIVROS DISPON&#205;VEIS&quot;" newline="True"/>
+                <output expression="&quot;=====================&quot;" newline="True"/>
+                <while expression="contador &lt; 5">
+                    <output expression="&quot;Livro &quot; &amp; contador+1 &amp; &quot;: &quot; &amp; livro[contador]" newline="True"/>
+                    <assign variable="contador" expression="contador+1"/>
+                </while>
+                <assign variable="logica" expression="false"/>
+            </while>
+        </body>
     </function>
 </flowgorithm>
