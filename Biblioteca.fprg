@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="unity"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-12-22 08:00:47 PM"/>
+        <attribute name="saved" value="2021-12-22 09:58:29 PM"/>
         <attribute name="created" value="dW5pdHk7REVTS1RPUC00Rkg4UkdSOzIwMjEtMTItMjI7MDk6NTc6MDAgQU07Mjg5OQ=="/>
-        <attribute name="edited" value="dW5pdHk7REVTS1RPUC00Rkg4UkdSOzIwMjEtMTItMjI7MDg6MDA6NDcgUE07NzszMDI2"/>
+        <attribute name="edited" value="dW5pdHk7REVTS1RPUC00Rkg4UkdSOzIwMjEtMTItMjI7MDk6NTg6MjkgUE07MTM7MzA4NQ=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -40,7 +40,252 @@
                     <output expression="&quot;Livro &quot; &amp; contador+1 &amp; &quot;: &quot; &amp; livro[contador]" newline="True"/>
                     <assign variable="contador" expression="contador+1"/>
                 </while>
-                <assign variable="logica" expression="false"/>
+                <output expression="&quot;Digite o n&#250;mero do livro para mais informa&#231;&#245;es ou 0 para sair: &quot;" newline="True"/>
+                <input variable="escolher"/>
+                <if expression="escolher == 0">
+                    <then>
+                        <assign variable="logica" expression="false"/>
+                    </then>
+                    <else>
+                        <if expression="escolher == 1">
+                            <then>
+                                <output expression="&quot;=====================&quot;" newline="True"/>
+                                <output expression="&quot;Nome: O pequeno pr&#237;ncipe&quot;" newline="True"/>
+                                <output expression="&quot;Autor: Antoine de Saint-Exup&#233;ry&quot;" newline="True"/>
+                                <output expression="&quot;P&#225;ginas: 93&quot;" newline="True"/>
+                                <output expression="&quot;Pre&#231;o: 12.90&quot;" newline="True"/>
+                                <output expression="&quot;Categoria: infantil&quot;" newline="True"/>
+                                <output expression="&quot;Edi&#231;&#227;o: 1&quot;" newline="True"/>
+                                <output expression="&quot;Sinopse: O pr&#243;prio autor do livro conta sobre o fat&#237;dico dia em que seu avi&#227;o cai no meio do Deserto do Saara, onde ele se depara com o pequeno pr&#237;ncipe.&quot;" newline="True"/>
+                                <output expression="&quot;Digite 1 para comprar o livro ou 0 para voltar: &quot;" newline="True"/>
+                                <input variable="escolher2"/>
+                                <if expression="escolher2 == 0">
+                                    <then/>
+                                    <else>
+                                        <if expression="escolher2 == 1">
+                                            <then>
+                                                <assign variable="saldo" expression="saldo-12.90"/>
+                                                <if expression="saldo &lt; 0">
+                                                    <then>
+                                                        <output expression="&quot;Voc&#234; n&#227;o tem saldo suficiente&quot;" newline="True"/>
+                                                        <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                        <input variable="recomecar"/>
+                                                        <assign variable="contador" expression="0"/>
+                                                        <assign variable="saldo" expression="saldoaux"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Voc&#234; comprou o livro &quot; &amp; livro[0]" newline="True"/>
+                                                        <assign variable="logica" expression="false"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;N&#250;mero inv&#225;lido&quot;" newline="True"/>
+                                                <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                <input variable="recomecar"/>
+                                                <assign variable="contador" expression="0"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="escolher == 2">
+                                    <then>
+                                        <output expression="&quot;=====================&quot;" newline="True"/>
+                                        <output expression="&quot;Nome: Helena&quot;" newline="True"/>
+                                        <output expression="&quot;Autor: Machado de Assis&quot;" newline="True"/>
+                                        <output expression="&quot;P&#225;ginas: 280&quot;" newline="True"/>
+                                        <output expression="&quot;Pre&#231;o: 16.70&quot;" newline="True"/>
+                                        <output expression="&quot;Categoria: romance&quot;" newline="True"/>
+                                        <output expression="&quot;Edi&#231;&#227;o: 1&quot;" newline="True"/>
+                                        <output expression="&quot;Sinopse: A protagonista de origens humildes &#233; reconhecida em testamento como filha e herdeira do conselheiro Vale, homem de elite carioca do segundo imp&#233;rio.&quot;" newline="True"/>
+                                        <output expression="&quot;Digite 1 para comprar o livro ou 0 para voltar: &quot;" newline="True"/>
+                                        <input variable="escolher2"/>
+                                        <if expression="escolher2 == 0">
+                                            <then>
+                                                <assign variable="contador" expression="0"/>
+                                            </then>
+                                            <else>
+                                                <if expression="escolher2 == 1">
+                                                    <then>
+                                                        <assign variable="saldo" expression="saldo-16.70"/>
+                                                        <if expression="saldo &lt; 0">
+                                                            <then>
+                                                                <output expression="&quot;Voc&#234; n&#227;o tem saldo suficiente&quot;" newline="True"/>
+                                                                <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                <input variable="recomecar"/>
+                                                                <assign variable="contador" expression="0"/>
+                                                                <assign variable="saldo" expression="saldoaux"/>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;Voc&#234; comprou o livro &quot; &amp; livro[1]" newline="True"/>
+                                                                <assign variable="logica" expression="false"/>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;N&#250;mero inv&#225;lido&quot;" newline="True"/>
+                                                        <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                        <input variable="recomecar"/>
+                                                        <assign variable="contador" expression="0"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="escolher == 3">
+                                            <then>
+                                                <output expression="&quot;=====================&quot;" newline="True"/>
+                                                <output expression="&quot;Nome: Sapiens-uma breve hist&#243;ria da humanidade&quot;" newline="True"/>
+                                                <output expression="&quot;Autor: Yuval Harari&quot;" newline="True"/>
+                                                <output expression="&quot;P&#225;ginas: 443&quot;" newline="True"/>
+                                                <output expression="&quot;Pre&#231;o: 59.90&quot;" newline="True"/>
+                                                <output expression="&quot;Categoria: hist&#243;ria&quot;" newline="True"/>
+                                                <output expression="&quot;Edi&#231;&#227;o: 1&quot;" newline="True"/>
+                                                <output expression="&quot;Sinopse: O autor aborda a hist&#243;ria da humanidade sob uma perspectiva inovadora, de primatas insignificantes a senhores do mundo.&quot;" newline="True"/>
+                                                <output expression="&quot;Digite 1 para comprar o livro ou 0 para voltar: &quot;" newline="True"/>
+                                                <input variable="escolher2"/>
+                                                <if expression="escolher2 == 0">
+                                                    <then>
+                                                        <assign variable="contador" expression="0"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="escolher2 == 1">
+                                                            <then>
+                                                                <assign variable="saldo" expression="saldo-59.90"/>
+                                                                <if expression="saldo &lt; 0">
+                                                                    <then>
+                                                                        <output expression="&quot;Voc&#234; n&#227;o tem saldo suficiente&quot;" newline="True"/>
+                                                                        <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                        <input variable="recomecar"/>
+                                                                        <assign variable="contador" expression="0"/>
+                                                                        <assign variable="saldo" expression="saldoaux"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;Voc&#234; comprou o livro &quot; &amp; livro[2]" newline="True"/>
+                                                                        <assign variable="logica" expression="false"/>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;N&#250;mero inv&#225;lido&quot;" newline="True"/>
+                                                                <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                <input variable="recomecar"/>
+                                                                <assign variable="contador" expression="0"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="escolher == 4">
+                                                    <then>
+                                                        <output expression="&quot;=====================&quot;" newline="True"/>
+                                                        <output expression="&quot;Nome: Mindset: a nova psicologia do sucesso&quot;" newline="True"/>
+                                                        <output expression="&quot;Autor: Carol S. Dweck, Ph. D.&quot;" newline="True"/>
+                                                        <output expression="&quot;P&#225;ginas: 312&quot;" newline="True"/>
+                                                        <output expression="&quot;Pre&#231;o: 31.90&quot;" newline="True"/>
+                                                        <output expression="&quot;Categoria: psicologia&quot;" newline="True"/>
+                                                        <output expression="&quot;Edi&#231;&#227;o: 1&quot;" newline="True"/>
+                                                        <output expression="&quot;Sinopse: Se trata de uma atitude mental com que esperamos a vida, uma explica&#231;&#227;o de por que somos otimistas ou pessimistas, bem-sucedidos ou n&#227;o.&quot;" newline="True"/>
+                                                        <output expression="&quot;Digite 1 para comprar o livro ou 0 para voltar: &quot;" newline="True"/>
+                                                        <input variable="escolher2"/>
+                                                        <if expression="escolher2 == 0">
+                                                            <then>
+                                                                <assign variable="contador" expression="0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="escolher2 == 1">
+                                                                    <then>
+                                                                        <assign variable="saldo" expression="saldo-31.90"/>
+                                                                        <if expression="saldo &lt; 0">
+                                                                            <then>
+                                                                                <output expression="&quot;Voc&#234; n&#227;o tem saldo suficiente&quot;" newline="True"/>
+                                                                                <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                                <input variable="recomecar"/>
+                                                                                <assign variable="contador" expression="0"/>
+                                                                                <assign variable="saldo" expression="saldoaux"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <output expression="&quot;Voc&#234; comprou o livro &quot; &amp; livro[3]" newline="True"/>
+                                                                                <assign variable="logica" expression="false"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;N&#250;mero inv&#225;lido&quot;" newline="True"/>
+                                                                        <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                        <input variable="recomecar"/>
+                                                                        <assign variable="contador" expression="0"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="escolher == 5">
+                                                            <then>
+                                                                <output expression="&quot;=====================&quot;" newline="True"/>
+                                                                <output expression="&quot;Nome: Assassinato no expresso do oriente&quot;" newline="True"/>
+                                                                <output expression="&quot;Autor: Agatha Christie&quot;" newline="True"/>
+                                                                <output expression="&quot;P&#225;ginas: 240&quot;" newline="True"/>
+                                                                <output expression="&quot;Pre&#231;o: 31.43&quot;" newline="True"/>
+                                                                <output expression="&quot;Categoria: mist&#233;rio&quot;" newline="True"/>
+                                                                <output expression="&quot;Edi&#231;&#227;o: 1&quot;" newline="True"/>
+                                                                <output expression="&quot;Sinopse: Um detetive famoso embarca no trem expresso do oriente, nela acontece uma s&#233;rie de crimes durante a viagem, iniciando uma investiga&#231;&#227;o para descobrir quem &#233; o assassino.&quot;" newline="True"/>
+                                                                <output expression="&quot;Digite 1 para comprar o livro ou 0 para voltar: &quot;" newline="True"/>
+                                                                <input variable="escolher2"/>
+                                                                <if expression="escolher2 == 0">
+                                                                    <then>
+                                                                        <assign variable="contador" expression="0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="escolher2 == 1">
+                                                                            <then>
+                                                                                <assign variable="saldo" expression="saldo-31.43"/>
+                                                                                <if expression="saldo &lt; 0">
+                                                                                    <then>
+                                                                                        <output expression="&quot;Voc&#234; n&#227;o tem saldo suficiente&quot;" newline="True"/>
+                                                                                        <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                                        <input variable="recomecar"/>
+                                                                                        <assign variable="contador" expression="0"/>
+                                                                                        <assign variable="saldo" expression="saldoaux"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <output expression="&quot;Voc&#234; comprou o livro &quot; &amp; livro[4]" newline="True"/>
+                                                                                        <assign variable="logica" expression="false"/>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </then>
+                                                                            <else>
+                                                                                <output expression="&quot;N&#250;mero inv&#225;lido&quot;" newline="True"/>
+                                                                                <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                                <input variable="recomecar"/>
+                                                                                <assign variable="contador" expression="0"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;N&#250;mero inv&#225;lido&quot;" newline="True"/>
+                                                                <output expression="&quot;Digite qualquer n&#250;mero para voltar: &quot;" newline="True"/>
+                                                                <input variable="recomecar"/>
+                                                                <assign variable="contador" expression="0"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
             </while>
         </body>
     </function>
